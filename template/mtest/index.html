@@ -15,9 +15,9 @@
 <div id="loading">
 <div id="circular" ><div id="circular_1" class="circular"></div> <div id="circular_2" class="circular"></div> <div id="circular_3" class="circular"></div> <div id="circular_4" class="circular"></div> <div id="circular_5" class="circular"></div> <div id="circular_6" class="circular"></div> <div id="circular_7" class="circular"></div> <div id="circular_8" class="circular"></div> </div>
  </div>
-   <div id="main" class="ant-fadeIn">
+   <div id="main" class="ant-fadeIn" ms-controller="app">
   <header ><h1>移动模版</h1></header>
-<div ms-controller="xxx">
+<div  id="appBD">
     <ul>
         <li><a href="#/aaa">aaa</a></li>
         <li><a href="#/bbb">bbb</a></li>
@@ -26,33 +26,24 @@
         <li><a href="#/eee">eee</a></li>
     </ul>
     <div style="color:red">{{currPath}}</div>
-    <div style="height: 600px;width:1px;">
+    <div style="height: 200px;width:1px;">
     </div>
     <p id="eee">会定位到这里</p>
 </div>
+<footer><span class="m-fbd"><a href="#/index">首页</a></span><span class="m-fbd"><a href="#/bbb">页面2</a></span><span class="m-fbd"><a href="#">首页</a></span></footer>
 </div>
-<input type="checkbox" id="menu" class="menuControl" checked="checked">  <!-- Hidden -->
-    <label for="menu">
-        <div class="circle-container">
-            <button class="circle">&#10006;</button>
-        </div>
-    </label>  
 
-    <ul class="items">
-      <li>&#9733;11</li>
-      <li>&#9733;22</li>
-      <li>&#9733;33</li>
-      <li>&#9733;</li>
-      <li>&#9733;</li>
-      <li>&#9733;</li>         
-    </ul>  
     <script src="js/avalon.js"></script>
     <script>
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+WeixinJSBridge.call('hideToolbar');
+});
 require("mmRouter", function() {
-    var model = avalon.define('xxx', function(vm) {
+    var model = avalon.define('app', function(vm) {
         vm.currPath = ""
+   
     })
-    avalon.router.get("/aaa", function(a) {
+    avalon.router.get("/index", function(a) {
         model.currPath = this.path
     })
     avalon.router.get("/bbb", function(a) {
@@ -69,11 +60,12 @@ require("mmRouter", function() {
         model.currPath = this.path
     })
     avalon.history.start({
-        basepath: "/mvvm"
+        basepath: "/index"
     })
     avalon.scan();
     document.getElementById('loading').style.display='none';
     document.getElementById('main').style.display='block';
+   
 })
     </script>
 </body>
