@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>移动模版</title>
+  <meta name="fragment" content="!" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> 
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" /> 
+    <link rel="stylesheet" href="style/base.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<div id="loading">
+<div id="circular" ><div id="circular_1" class="circular"></div> <div id="circular_2" class="circular"></div> <div id="circular_3" class="circular"></div> <div id="circular_4" class="circular"></div> <div id="circular_5" class="circular"></div> <div id="circular_6" class="circular"></div> <div id="circular_7" class="circular"></div> <div id="circular_8" class="circular"></div> </div>
+ </div>
+   <div id="main" class="ant-fadeIn">
+  <header ><h1>移动模版</h1></header>
+<div ms-controller="xxx">
+    <ul>
+        <li><a href="#/aaa">aaa</a></li>
+        <li><a href="#/bbb">bbb</a></li>
+        <li><a href="#/ccc">ccc</a></li>
+        <li><a href="#/ddd/222">ddd</a></li>
+        <li><a href="#/eee">eee</a></li>
+    </ul>
+    <div style="color:red">{{currPath}}</div>
+    <div style="height: 600px;width:1px;">
+    </div>
+    <p id="eee">会定位到这里</p>
+</div>
+</div>
+<input type="checkbox" id="menu" class="menuControl" checked="checked">  <!-- Hidden -->
+    <label for="menu">
+        <div class="circle-container">
+            <button class="circle">&#10006;</button>
+        </div>
+    </label>  
+
+    <ul class="items">
+      <li>&#9733;11</li>
+      <li>&#9733;22</li>
+      <li>&#9733;33</li>
+      <li>&#9733;</li>
+      <li>&#9733;</li>
+      <li>&#9733;</li>         
+    </ul>  
+    <script src="js/avalon.js"></script>
+    <script>
+require("mmRouter", function() {
+    var model = avalon.define('xxx', function(vm) {
+        vm.currPath = ""
+    })
+    avalon.router.get("/aaa", function(a) {
+        model.currPath = this.path
+    })
+    avalon.router.get("/bbb", function(a) {
+        model.currPath = this.path
+    })
+    avalon.router.get("/ccc", function(a) {
+        model.currPath = this.path
+    })
+    avalon.router.get("/ddd/:ddd", function(a) {//:ddd为参数
+        avalon.log(a)
+        model.currPath = this.path
+    })
+    avalon.router.get("/eee", function(a) {
+        model.currPath = this.path
+    })
+    avalon.history.start({
+        basepath: "/mvvm"
+    })
+    avalon.scan();
+    document.getElementById('loading').style.display='none';
+    document.getElementById('main').style.display='block';
+})
+    </script>
+</body>
+</html>

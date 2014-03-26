@@ -1,0 +1,20 @@
+{
+  "name": "tPC",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "gulp": "~3.5.5"
+  },
+  "devDependencies": {
+    "gulp-concat": "~2.1.7",
+    "gulp-uglify": "~0.2.1",
+    "gulp-imagemin": "~0.1.5",
+    "gulp-minify-css": "~0.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Megic",
+  "license": "ISC"
+}
