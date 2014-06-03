@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>webapp单页演示模版</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+     <link href="css/ratchet.min.css" rel="stylesheet"><!-- Ratchet 库 -->
+     <link href="css/component.css" rel="stylesheet"><!--菜单效果css -->
+    <link href="css/base.min.css" rel="stylesheet"><!--常用&基础css -->
+     <link href="css/style.css" rel="stylesheet"><!--模版css -->
+  </head>
+<body>
+<div id="st-container" class="st-effect-11 st-container">
+   <nav class="st-menu st-effect-11" id="menu">
+        <h2 class="icon-lab">导航菜单<em>Sidebar</em></h2>
+        <ul>
+          <li><a class="icon-data" href="#">关于我们</a></li>
+          <li><a class=" icon-location" href="#">新闻动态</a></li>
+          <li><a class="icon-study" href="#">Study</a></li>
+          <li><a class=" icon-photo" href="#">Collections</a></li>
+          <li><a class=" icon-wallet" href="#">Credits</a></li>
+        </ul>
+      </nav>
+    <!-- content push wrapper -->
+    <div class="st-pusher">
+        <div class="st-content"><!-- this is the wrapper for the content -->
+            <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+            <!---页面主体-->
+    <header class="bar bar-nav">
+     <a class="icon icon-home pull-left"></a>
+  <a class="icon icon-bars pull-right op-menu"></a>
+      <h1 class="title">广东省中医药大学</h1>
+    </header>
+<nav class="bar bar-tab">
+  <a class="tab-item active" href="#">
+    <span class="icon icon-home"></span>
+    <span class="tab-label">首页</span>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-person"></span>
+    <span class="tab-label">Profile</span>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-star-filled"></span>
+    <span class="tab-label">Favorites</span>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-search"></span>
+    <span class="tab-label">Search</span>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-gear"></span>
+    <span class="tab-label">Settings</span>
+  </a>
+</nav>
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div class="content">
+<div id="wrapper">
+  <div id="scroller"><!---滚动主体-->
+<div id='mySwipe' class='swipe'>
+  <div class='swipe-wrap'>
+    <div class="wrap"><a href="#" ><img src="http://42.121.107.88/wyl/style/p1.jpg" ></a></div>
+  <div class="wrap"><a href="#" ><img src="http://42.121.107.88/wyl/style/p2.jpg" ></a></div>
+  </div>
+</div>
+<div id="s-nav" class="f-tac"><em class="on">&nbsp;</em><em>&nbsp;</em></div>
+<ul class="table-view">
+  <li class="table-view-cell media">
+    <a class="navigate-right" href="http://www.baidu.com">
+      <img class="media-object pull-left" src="http://placehold.it/42x42">
+      <div class="media-body">
+        Item 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+      </div>
+    </a>
+  </li>
+  <li class="table-view-cell media">
+    <a class="navigate-right" href="http://www.baidu.com">
+      <img class="media-object pull-left" src="http://placehold.it/42x42">
+      <div class="media-body">
+        Item 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+      </div>
+    </a>
+  </li>
+    <li class="table-view-cell media">
+    <a class="navigate-right" href="http://www.baidu.com">
+      <img class="media-object pull-left" src="http://placehold.it/42x42">
+      <div class="media-body">
+        Item 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+      </div>
+    </a>
+  </li>
+  <li class="table-view-cell media">
+    <a class="navigate-right" href="http://www.baidu.com">
+      <img class="media-object pull-left" src="http://placehold.it/42x42">
+      <div class="media-body">
+        Item 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+      </div>
+    </a>
+  </li>
+    <li class="table-view-cell media">
+    <a class="navigate-right" href="http://www.baidu.com">
+      <img class="media-object pull-left" src="http://placehold.it/42x42">
+      <div class="media-body">
+        Item 1<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+      </div>
+    </a>
+  </li>
+    <li class="table-view-cell media">
+    <a class="navigate-right" href="http://www.baidu.com">
+      <img class="media-object pull-left" src="http://placehold.it/42x42">
+      <div class="media-body">
+        Item 444<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+      </div>
+    </a>
+  </li>
+</ul>
+   
+  <!---滚动主体.end-->
+  </div>
+</div>
+    </div>
+
+<div id="myModalexample" class="modal">
+  <header class="bar bar-nav">
+    <a class="icon icon-close pull-right" href="#myModalexample"></a>
+    <h1 class="title">Modal</h1>
+  </header>
+  <div class="content">
+    <p class="content-padded">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+  </div>
+</div>
+<!---页面主体.end-->
+            </div><!-- /st-content-inner -->
+        </div><!-- /st-content -->
+    </div><!-- /st-pusher -->
+</div><!-- /st-container -->
+    <!-- Include the compiled Ratchet JS -->
+ <script src="js/classie.js"></script>
+ <script src="js/sidebarEffects.js"></script>
+  <script src="js/swipe.min.js"></script>
+<script src="js/iscroll-lite.js"></script>
+ <script type="text/javascript">
+ //iscroll-5
+var  myScroll = new IScroll('#wrapper');
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+ //swipe
+var bullets = document.getElementById('s-nav').getElementsByTagName('em');
+var elem = document.getElementById('mySwipe');
+  Swipe(elem, {
+auto: 3000,
+    callback: function(pos) {
+      var l=bullets.length;
+      var i =l;
+      while (i--) bullets[i].className = ' ';
+      if(pos>=l) pos-=l;
+      bullets[pos].className = 'on';
+    }
+});
+</script>
+  </body>
+</html>
